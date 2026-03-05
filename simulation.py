@@ -55,9 +55,9 @@ def simulationOneServer(filename):
 
 
         if(not server.busy()) and queue:
-            next_request = queue
-            waitingSecond.append(currentSeconds - next_request.getsecond())
-            server.nextRequest(next_request)
+            nextRequest = queue
+            waitingSecond.append(currentSeconds - nextRequest.getsecond())
+            server.nextRequest(nextRequest)
 
     server.tick()
     currentSeconds +=1
